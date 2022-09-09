@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="499.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lima.controller.order.AddOrderController">
+   <children>
+      <Text layoutX="166.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nuevo pedido" textAlignment="CENTER" wrappingWidth="268.1363036033865">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Text>
+
+      <Label id="nifLabel" layoutX="22.0" layoutY="135.0" text="Introducir NIF del cliente">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField id="nifInput" fx:id="nifInput" layoutX="254.0" layoutY="128.0" prefHeight="44.0" prefWidth="325.0" />
+
+      <Label id="qtyLabel" layoutX="158.0" layoutY="200.0" text="Cantidad">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField id="qtyInput" fx:id="qtyInput" layoutX="254.0" layoutY="193.0" prefHeight="44.0" prefWidth="325.0" />
+
+      <Label id="dateLabel" layoutX="25.0" layoutY="259.0" text="Fecha y hora del pedido">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <DatePicker id="dateInput" fx:id="dateInput" layoutX="254.0" layoutY="252.0" prefHeight="44.0" prefWidth="325.0" />
+
+      <Label id="itemLabel" layoutX="171.0" layoutY="318.0" text="Artículo">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField id="itemInput" fx:id="itemInput" layoutX="254.0" layoutY="311.0" prefHeight="44.0" prefWidth="325.0" />
+
+      <Button id="saveButton" fx:id="saveButton" defaultButton="true" layoutX="342.0" layoutY="426.0" mnemonicParsing="false" onAction="#saveOrder" prefHeight="44.0" prefWidth="111.0" text="Guardar" />
+      <Button id="cancelButton" fx:id="cancelButton" cancelButton="true" layoutX="468.0" layoutY="426.0" mnemonicParsing="false" onAction="#cancelOrder" prefHeight="44.0" prefWidth="111.0" text="Cancelar" />
+   </children>
+</AnchorPane>

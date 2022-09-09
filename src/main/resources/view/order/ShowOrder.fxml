@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lima.controller.order.ShowOrderController">
+    <children>
+        <MenuBar layoutY="-1.0" prefHeight="26.0" prefWidth="600.0">
+            <menus>
+                <Menu fx:id="menuOrder" mnemonicParsing="false" text="Pedido">
+                    <items>
+                        <MenuItem fx:id="btnAddMenuOrder" mnemonicParsing="false" onAction="#clickAddMenu" text="Añadir..." />
+                        <MenuItem fx:id="btnDeleteMenuOrder" mnemonicParsing="false" onAction="#clickDeleteMenu" text="Borrar..." />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+
+        <RadioButton id="isSendRadio" fx:id="isSendRadio" layoutX="14.0" layoutY="41.0" mnemonicParsing="false" onAction="#filterOrdersIsSent" prefHeight="21.0" prefWidth="102.0" selected="true" text="Enviados">
+            <toggleGroup>
+                <ToggleGroup fx:id="ordersToggle" />
+            </toggleGroup>
+        </RadioButton>
+        <RadioButton id="toSentRadio" fx:id="toSentRadio" contentDisplay="CENTER" layoutX="116.0" layoutY="41.0" mnemonicParsing="false" onAction="#filterOrdersToSend" prefHeight="17.0" prefWidth="125.0" text="Pdnt. de envio" toggleGroup="$ordersToggle" />
+
+        <TableView id="orderTable" fx:id="orderTable" layoutX="12.0" layoutY="71.0" prefHeight="318.0" prefWidth="572.0">
+            <columns>
+                <TableColumn fx:id="colId" prefWidth="46.0" text="ID" />
+                <TableColumn fx:id="colUnit" prefWidth="91.5" text="UNITS" />
+                <TableColumn fx:id="colOrderDate" prefWidth="133.5" text="ORDER DATE" />
+                <TableColumn fx:id="colCustomerId" prefWidth="103.0" text="CUSTOMER ID" />
+                <TableColumn fx:id="colItemId" prefWidth="74.0" text="ITEM ID" />
+                <TableColumn fx:id="colReadyToShip" prefWidth="102.5" text="READY TO SHIP" />
+            </columns>
+        </TableView>
+      <Button fx:id="btnRefreshTable" layoutX="397.0" layoutY="34.0" mnemonicParsing="false" onAction="#refreshTable" prefHeight="31.0" prefWidth="87.0" text="Actualizar" />
+      <Button fx:id="backButton" layoutX="497.0" layoutY="34.0" mnemonicParsing="false" onAction="#backToMenu" prefHeight="31.0" prefWidth="87.0" text="Salir" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="499.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lima.controller.item.AddItemController">
+   <children>
+      <Text layoutX="166.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nuevo item" textAlignment="CENTER" wrappingWidth="268.1363036033865">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Text>
+      <Label layoutX="14.0" layoutY="125.0" text="Código del producto">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="codeInput" layoutX="254.0" layoutY="118.0" prefHeight="44.0" prefWidth="325.0" />
+      <Label layoutX="13.0" layoutY="182.0" text="Descripcion">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="descriptionInput" layoutX="254.0" layoutY="175.0" prefHeight="44.0" prefWidth="325.0" />
+      <Label layoutX="13.0" layoutY="242.0" text="Precio de venta">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="sellPriceInput" layoutX="254.0" layoutY="235.0" prefHeight="44.0" prefWidth="325.0" />
+      <Label layoutX="14.0" layoutY="304.0" prefHeight="30.0" prefWidth="146.0" text="Precio de envío">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      
+      <TextField fx:id="itemshippingCostInput" layoutX="254.0" layoutY="297.0" prefHeight="44.0" prefWidth="325.0" />
+      <Label layoutX="14.0" layoutY="363.0" text="PreparationTime">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="preparationTimeInput" layoutX="254.0" layoutY="356.0" prefHeight="44.0" prefWidth="325.0" />
+      <Button id="saveButton" fx:id="saveButton" defaultButton="true" layoutX="342.0" layoutY="426.0" mnemonicParsing="false" onAction="#saveItem" prefHeight="44.0" prefWidth="111.0" text="Guardar" />
+      <Button id="cancelButton" fx:id="cancelButton" cancelButton="true" layoutX="468.0" layoutY="426.0" mnemonicParsing="false" onAction="#cancelItem" prefHeight="44.0" prefWidth="111.0" text="Cancelar" />
+   </children>
+</AnchorPane>
