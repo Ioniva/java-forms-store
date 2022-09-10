@@ -28,6 +28,7 @@ $ mvn install
 Finally, it only remains to execute the main method. This main is located in `./src/main/java/com/example/lima/HelloApplication.java`
 
 **Display sample result:**
+
 ![Menu to display the items](/src/main/resources/assets/table-example.png "LIMA items table")
 
 ## License
