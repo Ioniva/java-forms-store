@@ -13,8 +13,8 @@ Always recommended to download from GitHub latest release for new features.
 Once the project is opened, modify the properties file to be able to connect to the database.
 
 **Database for testing**
-This project contains a copy of the database for testing purposes, this is an exported SQL file.
 
+This project contains a copy of the database for testing purposes, this is an exported SQL file.
 File location `./src/main/resources/db/Dump20220419.sql`
 
 ### 3. Install the dependencies
